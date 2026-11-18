@@ -1,0 +1,504 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================================================
+   15 Arch Linux / Hyprland Rice Color Palettes
+   ========================================================================= */
+
+:root,
+[data-theme='mocha'] {
+  --bg-crust: #11111b;
+  --bg-mantle: #181825;
+  --bg-card: #1e1e2e;
+  --text-main: #cdd6f4;
+  --text-muted: #a6adc8;
+  --accent-primary: #89b4fa;
+  --accent-highlight: #cba6f7;
+  --border-color: #313244;
+}
+
+[data-theme='tokyo'] {
+  --bg-crust: #1a1b26;
+  --bg-mantle: #24283b;
+  --bg-card: #292e42;
+  --text-main: #c0caf5;
+  --text-muted: #565f89;
+  --accent-primary: #7aa2f7;
+  --accent-highlight: #bb9af7;
+  --border-color: #414868;
+}
+
+[data-theme='gruvbox'] {
+  --bg-crust: #1d2021;
+  --bg-mantle: #282828;
+  --bg-card: #32302f;
+  --text-main: #ebdbb2;
+  --text-muted: #a89984;
+  --accent-primary: #fabd2f;
+  --accent-highlight: #b8bb26;
+  --border-color: #504945;
+}
+
+[data-theme='solarized'] {
+  --bg-crust: #002b36;
+  --bg-mantle: #073642;
+  --bg-card: #0a4856;
+  --text-main: #839496;
+  --text-muted: #586e75;
+  --accent-primary: #268bd2;
+  --accent-highlight: #b58900;
+  --border-color: #586e75;
+}
+
+[data-theme='nord'] {
+  --bg-crust: #2e3440;
+  --bg-mantle: #3b4252;
+  --bg-card: #434c5e;
+  --text-main: #eceff4;
+  --text-muted: #d8dee9;
+  --accent-primary: #88c0d0;
+  --accent-highlight: #81a1c1;
+  --border-color: #4c566a;
+}
+
+[data-theme='everforest'] {
+  --bg-crust: #2d353b;
+  --bg-mantle: #343f44;
+  --bg-card: #3d484d;
+  --text-main: #d3c6aa;
+  --text-muted: #9da9a0;
+  --accent-primary: #a7c080;
+  --accent-highlight: #dbbc7f;
+  --border-color: #475258;
+}
+
+[data-theme='rose-pine'] {
+  --bg-crust: #191724;
+  --bg-mantle: #1f1d2e;
+  --bg-card: #26233a;
+  --text-main: #e0def4;
+  --text-muted: #908caa;
+  --accent-primary: #ebbcba;
+  --accent-highlight: #9ccfd8;
+  --border-color: #403d52;
+}
+
+[data-theme='dracula'] {
+  --bg-crust: #191a21;
+  --bg-mantle: #282a36;
+  --bg-card: #343746;
+  --text-main: #f8f8f2;
+  --text-muted: #6272a4;
+  --accent-primary: #bd93f9;
+  --accent-highlight: #ff79c6;
+  --border-color: #44475a;
+}
+
+[data-theme='kanagawa'] {
+  --bg-crust: #1f1f28;
+  --bg-mantle: #2a2a37;
+  --bg-card: #363646;
+  --text-main: #dcd7ba;
+  --text-muted: #727169;
+  --accent-primary: #7e9cd8;
+  --accent-highlight: #ffa066;
+  --border-color: #54546d;
+}
+
+[data-theme='cyberpunk'] {
+  --bg-crust: #0a0a0f;
+  --bg-mantle: #12121a;
+  --bg-card: #1a1a26;
+  --text-main: #00ffcc;
+  --text-muted: #7070a0;
+  --accent-primary: #ff007f;
+  --accent-highlight: #ffe600;
+  --border-color: #330066;
+}
+
+[data-theme='doom-one'] {
+  --bg-crust: #21242b;
+  --bg-mantle: #282c34;
+  --bg-card: #30343f;
+  --text-main: #bbc2cf;
+  --text-muted: #5c6370;
+  --accent-primary: #61afef;
+  --accent-highlight: #c678dd;
+  --border-color: #3f444a;
+}
+
+[data-theme='ayu'] {
+  --bg-crust: #0b0e14;
+  --bg-mantle: #131721;
+  --bg-card: #1f2430;
+  --text-main: #bfccc2;
+  --text-muted: #565b66;
+  --accent-primary: #ffcc66;
+  --accent-highlight: #39bae6;
+  --border-color: #272d38;
+}
+
+[data-theme='one-dark'] {
+  --bg-crust: #1e1e1e;
+  --bg-mantle: #252526;
+  --bg-card: #2d2d2d;
+  --text-main: #d4d4d4;
+  --text-muted: #858585;
+  --accent-primary: #569cd6;
+  --accent-highlight: #c586c0;
+  --border-color: #3f3f46;
+}
+
+[data-theme='github-dark'] {
+  --bg-crust: #0d1117;
+  --bg-mantle: #161b22;
+  --bg-card: #21262d;
+  --text-main: #c9d1d9;
+  --text-muted: #8b949e;
+  --accent-primary: #58a6ff;
+  --accent-highlight: #bc8cff;
+  --border-color: #30363d;
+}
+
+[data-theme='frappe'] {
+  --bg-crust: #232634;
+  --bg-mantle: #292c3c;
+  --bg-card: #303446;
+  --text-main: #c6d0f5;
+  --text-muted: #9499b7;
+  --accent-primary: #8caaee;
+  --accent-highlight: #ca9ee6;
+  --border-color: #414559;
+}
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--bg-crust);
+    color: var(--text-main);
+    font-family: Inter, system-ui, sans-serif;
+    min-height: 100vh;
+    transition:
+      background-color 150ms ease,
+      color 150ms ease;
+  }
+
+  ::selection {
+    background-color: var(--accent-primary);
+    color: var(--bg-crust);
+  }
+
+  /* Enhanced focus-visible styles for all interactive elements */
+  :focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 3px var(--accent-primary),
+      0 0 0 1px var(--bg-crust);
+  }
+
+  /* Ensure buttons and interactive elements have minimum touch target */
+  button:not(:disabled),
+  [role='button']:not(:disabled),
+  a:not([href='']),
+  input:not([type='hidden']),
+  select,
+  textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Allow smaller touch targets for specific compact elements */
+  .btn-icon,
+  .scroll-btn,
+  .card-action-btn,
+  .badge,
+  .tag {
+    min-height: 36px;
+    min-width: 36px;
+  }
+
+  /* Custom dark scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bg-crust);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+  }
+}
+
+@layer components {
+  /* Tiling Window Action Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    border-radius: 0.375rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    transition: all 150ms ease;
+    min-height: 44px;
+  }
+  .btn:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+  }
+  .btn:active {
+    transform: scale(0.98);
+  }
+
+  .btn-primary {
+    background-color: var(--accent-primary);
+    color: var(--bg-crust);
+    font-weight: 700;
+    border-color: var(--accent-primary);
+  }
+  .btn-primary:hover {
+    opacity: 0.9;
+    color: var(--bg-crust);
+  }
+
+  .btn-secondary {
+    background-color: var(--bg-card);
+    color: var(--accent-highlight);
+    border-color: var(--border-color);
+  }
+  .btn-secondary:hover {
+    border-color: var(--accent-highlight);
+    color: var(--accent-highlight);
+  }
+
+  .input {
+    width: 100%;
+    padding: 0.5rem 0.875rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-crust);
+    color: var(--text-main);
+    border-radius: 0.375rem;
+    outline: none;
+    transition: border-color 150ms ease;
+    min-height: 44px;
+  }
+  .input::placeholder {
+    color: var(--text-muted);
+    opacity: 0.7;
+  }
+  .input:focus {
+    border-color: var(--accent-primary);
+  }
+
+  /* Tiled Card */
+  .card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    transition: all 150ms ease;
+  }
+  .card:hover {
+    border-color: var(--accent-primary);
+  }
+
+  /* Scroll buttons for media rows */
+  .scroll-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.375rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-mantle);
+    color: var(--text-main);
+    transition: all 150ms ease;
+  }
+  .scroll-btn:hover {
+    background-color: var(--bg-card);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+  }
+  .scroll-btn:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 3px var(--accent-primary),
+      0 0 0 1px var(--bg-crust);
+  }
+
+  /* Card action buttons (watchlist toggle, etc.) */
+  .card-action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 0.375rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-crust);
+    color: var(--text-main);
+    transition: all 150ms ease;
+  }
+  .card-action-btn:hover {
+    background-color: var(--bg-card);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+  }
+  .card-action-btn:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 3px var(--accent-primary),
+      0 0 0 1px var(--bg-crust);
+  }
+
+  /* Modal Overlay & Tiling Container */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(12px);
+    z-index: 0;
+  }
+
+  .modal-content {
+    position: relative;
+    z-index: 10;
+    max-height: 92vh;
+    overflow: hidden;
+    background-color: var(--bg-mantle);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+  }
+
+  /* Carousel Movie Row - consistent with grid card widths */
+  .movie-row {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .movie-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Grid card wrapper for consistent alignment */
+  .grid-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+}
+
+@layer utilities {
+  .animate-modal-in {
+    animation: modalIn 180ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .animate-slide-in {
+    animation: slideIn 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* =========================================================================
+   Aether Preloader Animations & Accessibility
+   ========================================================================= */
+
+@keyframes preloaderPulseBar {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(250%);
+  }
+}
+
+.preloader-pulsing-bar {
+  animation: preloaderPulseBar 1.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preloader-spinner {
+    animation: none !important;
+    border-color: #c0392b !important;
+    opacity: 0.85;
+  }
+
+  .preloader-pulsing-bar {
+    animation: none !important;
+    transform: none !important;
+    width: 100% !important;
+    opacity: 0.85;
+  }
+}
+
